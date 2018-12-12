@@ -38,10 +38,10 @@ sut.enqueue("Item 1");
 sut.enqueue("Item 2");
 sut.enqueue("Item 3");
 
-console.log(sut.peek());
+console.log(sut.peek() + "(peek)");
 console.log(sut.dequeue());
 console.log(sut.dequeue());
-console.log(sut.peek());
+console.log(sut.peek()+ "(peek)");
 console.log(sut.length);
 console.log(sut.dequeue());
 
