@@ -45,4 +45,4 @@ console.log(sut.peek()+ "(peek)");
 console.log(sut.length);
 console.log(sut.dequeue());
 
-console.log(sut.isEmpty()); // should be true
+console.log("Empty?"+ sut.isEmpty()); // should be true

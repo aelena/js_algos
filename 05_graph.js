@@ -126,7 +126,39 @@ function createGraph(directed = false){
                     }
                 });
             }
-        }   // close of breadthFirstSearch
+        },   // close of breadthFirstSearch
+
+
+        depthFirstSearch(startingNodeKey, visitFn){
+            
+            const startingNode = this.getNode(startingNodeKey);
+            // need to keep track of which nodes we have visited
+            // and which we have not visited yet
+            const visited = nodes.reduce((acc, node) => {
+                // by default not visited
+                acc[node.key] = false;
+                return acc;
+            }, {});
+
+            
+            function explore(node){
+                if(visited[node.key]){
+                    return;
+                }
+
+                visitFn(node);
+                visited[node.key] = true;
+
+                node.neighbors.forEach(element => {
+                    explore(element);
+                });
+            }
+
+            explore(startingNode);
+
+
+        }
+
     }
 };
 
@@ -179,3 +211,8 @@ nodes.forEach(node => {
 });
 
 console.log("==================================");
+console.log("Depth Search First")
+
+graph2.depthFirstSearch('a', node => {
+    console.log(node.key)
+});
