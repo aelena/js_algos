@@ -13,17 +13,17 @@ function doTheInsertionSort(array, printFn){
             }
         }
 
-        printFn(i, array.join());
+        printFn(i, array);
 
     }
 
 };
 
 doTheInsertionSort([10,5,3,9,6,7,2,1,4,0,8], (i, array) => {
-    console.log(`Pass: ${i} => ${array}`);
+    console.log(`Pass: ${i} => ${array.join()}`);
 });
 
 
 doTheInsertionSort([120,52,13,92,6,87,43,101,27,2,21,4,60,55,22,321,8], (i, array) => {
-    console.log(`Pass: ${i} => ${array}`);
+    console.log(`Pass: ${i} => ${array.join()}`);
 });

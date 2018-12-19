@@ -4,7 +4,7 @@ function doTheBubble(_array, printFn){
     let swapped = false;
     let pass = 0;
     do{
-        printFn(++pass, _array.join() );
+        printFn(++pass, _array);
 
         swapped = false;
         _array.forEach((item,index) => {
@@ -22,9 +22,9 @@ function doTheBubble(_array, printFn){
 
 
 doTheBubble([10,5,3,9,6,7,2,1,4,0,8], (pass,joinedArray) => {console.log(
-    `Pass ${pass}: ${joinedArray}`)}
+    `Pass ${pass}: ${joinedArray.join()}`)}
 );
 
 doTheBubble([120,52,13,92,6,27,2,21,4,60,55,22,321,8], (pass,joinedArray) => {console.log(
-    `Pass ${pass}: ${joinedArray}`)}
+    `Pass ${pass}: ${joinedArray.join()}`)}
 );
